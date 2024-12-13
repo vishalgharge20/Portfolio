@@ -1,0 +1,138 @@
+@import "../../vars.css";
+
+
+.About{
+    position: relative;
+    background-color: rgba(12,12,12,0.6);
+    border-radius: 15px;
+    padding: 20px;
+    z-index: 1;
+    margin-left: 10%;
+    margin-right: 10%;
+    margin-top: 70px;
+    display: flex;
+
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+}
+
+.title{
+    color: var(--color-text);
+    font-size: 30px;
+    font-weight: 700;
+    letter-spacing: 1.7px;
+    text-transform: uppercase;
+}
+
+.aboutItemImage{
+    width: 30%;
+}
+
+.aboutItems{
+    display: flex;
+    flex-direction: column;
+    gap: 40px;
+    color: var(--color-text);
+
+}
+
+.aboutItemImage{
+    width: 12%;
+}
+
+.aboutItem{
+    display: flex;
+    flex-direction: column;
+    border-radius: 20px;
+    list-style: none;
+    color: var(--color-text);
+    padding: 10px;
+    background-image: linear-gradient(90deg, rgba(165,215,232,0.42)0%,rgba(255,255,255,0)100%);
+    text-decoration: none;
+    background-size: 0 100%;
+    background-repeat: no-repeat;
+    transition: 0.4s;
+}
+
+.aboutItem:hover{
+    background-size: 100% 100%;
+}
+
+
+@media screen and (max-width: 940px ) {
+    .About{
+        background: transparent;
+        padding-left: 0;
+        padding-right: 0;
+        flex-direction: column;
+    }
+    .leftside{
+        display: flex;
+        flex-direction: column;
+        align-items:center;
+        justify-content: center;
+    }
+    .leftside img{
+        display: flex; 
+        justify-content: center; 
+        align-items: center;
+        padding-left: 10%;
+    }
+    .aboutItemImage{
+        width: 30%;
+        padding: 10px;
+    }
+}
+
+
+@media screen and (min-width: 940px) and (max-width: 1024px) {
+    .About{
+        background: transparent;
+        padding-left: 0;
+        padding-right: 0;
+        flex-direction: column;
+    }
+    .leftside{
+        display: flex;
+        flex-direction: column;
+        align-items:center;
+        justify-content: center;
+    }
+    .leftside img{
+        display: flex; 
+        justify-content: center; 
+        align-items: center;
+        padding-left: 10%;
+    }
+    .aboutItemImage{
+        width: 30%;
+        padding: 10px;
+    }
+}
+
+
+@media screen and (min-width: 1025px) and (max-width:1200px) {
+    .About{
+        padding-left: 0;
+        padding-right: 0;
+        flex-direction: column;
+    }
+    .leftside{
+        display: flex;
+        flex-direction: column;
+        align-items:center;
+        justify-content: center;
+    }
+    .leftside img{
+        display: flex; 
+        justify-content: center; 
+        align-items: center;
+        padding-left: 10%;
+        width: 80%;
+    }
+    .aboutItemImage{
+        width: 20%;
+        padding: 10px;
+    }
+}

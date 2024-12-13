@@ -1,0 +1,211 @@
+@import "../../vars.css";
+
+.projectsContainer{
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: center;
+    margin: 0 auto;
+    padding-left: 100px;
+    width: 80%;
+    max-width: 1200px;
+    padding-top: 0px;
+}
+
+.title{
+    color: var(--color-text);
+    font-size: 30px;
+    font-weight: 700;
+    letter-spacing: 1.7px;
+    text-transform: uppercase;
+    margin: 0;
+}
+
+.projects{
+    display: flex;
+    flex-direction: row;
+    margin-top: 30px;
+    justify-content: space-between;
+}
+
+.project{
+    display: flex;
+    flex-direction: column;
+    width: 28%;
+    justify-content: space-between;
+    background-image: linear-gradient(90deg, rgba(25,55,109,1)0%,rgba(25,55,109,0.5)100%);
+    border-radius: 10px;
+}
+.project img{
+    margin-top: 20px;
+    margin-left: 12%;
+    margin-right: 12%;
+}
+.projectTitle{
+    color: var(--color-text);
+    font-size: 18px;
+    margin-top: 15px;
+    padding-left: 15px;
+    margin-bottom: 5px;
+}
+.projectDesc{
+    color: var(--color-text);
+    font-size: 16px;
+    padding-left: 15px;
+}
+
+.stacks{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    color: var(--color-text);
+    font-size: 17px;
+    padding-left: 15px;
+    padding-right: 15px;
+    margin-bottom: 15px;
+    gap: 10px;
+}
+.stack{
+    background-color: rgba(11, 59, 149, 0.705);
+    padding-left: 12px;
+    padding-right: 12px;
+    padding-top: 3px;
+    padding-bottom: 3px;
+    border-radius: 18px;
+}
+
+.buttons{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    padding-left: 50px;
+    gap: 10px;
+    padding-right: 50px;
+    padding-bottom: 15px;
+    
+}
+
+.buttons button{
+    width: 40%;
+    height: 30px;
+    border-radius: 20px;
+    color: var(--color-text);
+    background-color: var(--color-primary);
+
+}
+
+
+
+
+/* Media Queries */
+
+/* For screens below 1200px */
+@media (max-width: 1200px) {
+    .projectsContainer{
+        padding: 0px;
+    }
+    .projects {
+        width: 70%;
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 20px;
+    }
+    .stacks{
+        flex-direction: column;
+        gap: 10px;
+    }
+    .project {
+        width: 45%; /* Adjust width for smaller screens */
+    }
+
+    .buttons {
+        flex-direction: column;
+        padding:0;
+    }
+
+    .buttons button {
+        width: 40%;
+        margin-bottom: 10px;
+    }
+}
+
+
+
+/* For screens below 900px */
+@media (max-width: 900px) {
+    .projects {
+        width: 100%;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        gap: 20px;
+    }
+    .stacks{
+        flex-direction: column;
+        gap: 10px;
+    }
+    .project {
+        width: 80%; /* Adjust width for smaller screens */
+    }
+
+    .buttons {
+        flex-direction: column;
+        padding:0;
+    }
+
+    .buttons button {
+        width: 30%;
+        margin-bottom: 10px;
+    }
+}
+
+
+
+/* For screens below 480px */
+@media (max-width: 480px) {
+    .projectsContainer {
+        padding: 20px;
+        width: 100%;
+    }
+
+    .title {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-size: 24px;
+        text-align: center;
+    }
+
+    .projects {
+        flex-direction: column;
+        align-items: center;
+        gap: 40px;
+    }
+
+    .project {
+        width: 100%; /* Take most of the screen width */
+    }
+
+    .project img {
+        width: 80%;
+        margin: 20px auto; /* Center images */
+    }
+
+    .buttons {
+        flex-direction: column;
+        padding: 0;
+    }
+
+    .buttons button {
+        width: 40%;
+        margin-bottom: 10px;
+    }
+
+    .stacks {
+        flex-direction: column;
+        align-items: flex-start;
+        padding: 10px;
+    }
+}

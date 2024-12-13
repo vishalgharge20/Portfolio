@@ -1,0 +1,101 @@
+@import "../../vars.css";
+
+
+.navbar {
+    position: relative;
+    display: flex;
+    align-items: center; /* Vertically center items */
+    justify-content: space-between; /* Space between title and menu */
+    padding-top: 40px;
+    padding-left: 144px;
+    padding-bottom: 20px;
+    z-index: 2;
+    margin: 0 10%;
+  }
+  
+  .title {
+    font-size: 30px; /* Match Figma's font size */
+    font-weight: 700; /* Bold */
+    color: var(--color-text);
+    text-decoration: none; /* Remove underline */
+  }
+  
+  .menu {
+    display: flex;
+  }
+  
+  .menuItems {
+    display: flex;
+    list-style: none; /* Remove bullet points */
+    gap: 47px; /* Space between menu items */
+  }
+  
+  .menuItems li a {
+    font-family: 'Outfit', sans-serif;
+    font-size: 18px;
+    font-weight: 600;
+    color: var(--color-text);
+    text-decoration: none;
+    transition: color 0.3s ease; /* Add hover effect */
+  }
+  
+  .menuItems li a:hover {
+    color: var(--hover-color, #007BFF); /* Change to hover color */
+  }
+
+  .menuBtn{
+    display: none;
+}
+
+
+
+
+
+
+  @media screen and (max-width: 830px){
+    .navbar{
+        flex-direction: column;
+        align-items: flex-start;
+        padding-left: 20px; /* Adjust this padding */
+    }
+    .title{
+        display: flex;
+        justify-content: flex-start; /* Aligns text to the left */
+        align-items: center; /* Centers text vertically */
+    }
+    .menu{
+        position: absolute;
+        right: 0;
+        margin-right: 5px;
+        flex-direction: column;
+        align-items: flex-end;
+        gap: 11px;
+        z-index: 3;
+    }
+    .menuBtn{
+        display: block;
+        cursor: pointer;
+    }
+    .menuItems{
+        display: none;
+        flex-direction: column;
+        align-items: flex-end;
+        gap: 13px;
+        border-radius: 10px;
+        background: rgb(25,55,109);
+        background: linear-gradient(
+            0deg,
+            rgb(25,55,109,0.2) 0%,
+            rgb(25,55,109,1) 100%
+        );
+        padding: 24px 33px;
+        box-shadow: 0 0 4px 0 rgb(0,0,0,0.25);
+    }
+
+    .menuOpen{
+        display: flex;
+        z-index: 1;
+    }
+
+  };
+    

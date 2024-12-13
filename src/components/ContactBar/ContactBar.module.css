@@ -1,0 +1,112 @@
+@import "../../vars.css";
+
+.navBar{
+    background-color: var(--color-secondary);
+    margin-top: 100px;
+}
+
+.navBarContainer{
+    display: flex;
+    flex-direction: row;
+    color: var(--color-text);
+}
+
+.leftBox{
+    display: flex;
+    flex-direction: column;
+    align-content: center;
+    justify-content: center;
+    width: 50%;
+    margin-left: 0 auto;
+}
+.leftBox h2{
+    font-size: 80px;
+    font-weight: 700;
+    font-family:outfit;
+    margin-left: 25%;
+    margin-bottom: 0px;
+    padding-top: 10px;
+}
+.leftBox h3{
+    font-size: 40px;
+    font-weight: 400;
+    font-family:outfit;
+    margin-left: 25%;
+    margin-bottom: 0px;
+}
+
+.rightBox{
+    display: flex;
+    flex-direction: column;
+    align-content: center;
+    justify-content: center;
+    width: 50%;
+    margin-left: 8%;
+    padding-top: 10px;
+}
+
+.contact{
+    display: flex;
+    align-items: center;
+    flex-wrap: nowrap;
+    padding-bottom: 5px;
+}
+
+.contact a {
+    color: inherit; /* Keeps text color same as parent */
+    display: inline-block; /* Ensures anchor wraps the image properly */
+    transition: border 0.3s ease, transform 0.3s ease; /* Smooth transition for hover effects */
+}
+
+.contact img {
+    border: 2px solid transparent; /* Default border (invisible) */
+    border-radius: 5px; /* Optional: Adds rounded corners */
+    transition: border-color 0.3s ease, transform 0.3s ease, filter 0.3s ease; /* Smooth hover transition */
+}
+
+.contact img:hover {
+    border-color: orange; /* Adds an orange border on hover */
+    transform: scale(1.1); /* Slight zoom effect */
+    filter: brightness(1.2); /* Brightens the image slightly */
+    cursor: pointer; /* Pointer cursor to indicate the image is clickable */
+}
+
+.contact h5 {
+    text-decoration: none;
+    white-space: nowrap;
+    padding-left: 20px;
+}
+
+.contact h5 a {
+    text-decoration: none; /* Removes underline */
+    color: inherit; /* Inherits text color from parent */
+    transition: color 0.3s ease; /* Smooth transition for hover effect */
+}
+
+.contact h5 a:hover {
+    color: orange; /* Change color on hover */
+    cursor: pointer; /* Indicates clickability */
+}
+
+
+@media screen and (max-width:900px) {
+    .navBarContainer{
+        flex-direction: column;
+    }
+    .leftBox{
+        padding-bottom: 10px;
+        flex-direction: column;
+        width: 100%;
+    }
+    .leftBox h2{
+        font-size: 40px;
+        margin-left: 50px;
+    }
+    .leftBox h3{
+        font-size: 20px;
+        margin-left: 50px;
+    }
+    .navBar{
+        margin-top: 20px;
+    }
+}
